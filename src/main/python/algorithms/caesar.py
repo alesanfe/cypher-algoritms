@@ -1,4 +1,4 @@
-from affine import AffineCipher
+from src.main.python.algorithms.affine import AffineCipher
 
 
 class CaesarCipher:
@@ -29,18 +29,3 @@ class CaesarCipher:
             str: The decrypted text.
         """
         return self.algorithm.decrypt(text)
-
-
-# Example usage:
-if __name__ == '__main__':
-    # Crear una instancia de CaesarCipher con el desplazamiento
-    cipher = CaesarCipher(3)
-
-    # Cifrar el mensaje
-    ciphertext = cipher.encrypt("Hello, world!")
-    print("Texto cifrado:", ciphertext)
-    print()
-
-    # Descifrar el mensaje
-    plaintext = cipher.decrypt(ciphertext)
-    print("Texto descifrado:", plaintext)

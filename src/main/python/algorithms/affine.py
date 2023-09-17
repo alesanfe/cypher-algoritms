@@ -95,18 +95,3 @@ class AffineCipher:
             decrypted_text += char
 
         return decrypted_text
-
-
-# Example usage:
-if __name__ == '__main__':
-    # Crear una instancia de CaesarCipher con el desplazamiento
-    cipher = AffineCipher(1, 3, 26)
-
-    # Cifrar el mensaje
-    ciphertext = cipher.encrypt("Hello, world!")
-    print("Texto cifrado:", ciphertext)
-    print()
-
-    # Descifrar el mensaje
-    plaintext = cipher.decrypt(ciphertext)
-    print("Texto descifrado:", plaintext)

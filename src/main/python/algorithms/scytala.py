@@ -5,7 +5,6 @@ from dataclasses import dataclass
 class ScytaleCipher:
     num_rows: int
 
-
     def encrypt(self, text: str) -> str:
         """
             Encrypts the given plaintext using the Rail Fence Cipher.
@@ -22,7 +21,6 @@ class ScytaleCipher:
             for i in range(col, len(text), self.num_rows):
                 ciphertext += text[i]
         return ciphertext
-
 
     def decrypt(self, text) -> str:
         """
@@ -56,20 +54,3 @@ class ScytaleCipher:
             for i in range(col, len(text), num_columns):
                 plaintext += text[i]
         return plaintext.strip()  # Remove added spaces during decryption
-
-
-# Example usage:
-if __name__ == '__main__':
-    # Crear una instancia de la escitala.
-    scytale = ScytaleCipher(3)
-    message = "THISISASECRETMESSAGE"
-
-    # Encriptar el mensaje.
-    encrypted = scytale.encrypt(message)
-    print("Encrypted text:", encrypted)
-
-    # Desencriptar el mensaje.
-    decrypted = scytale.decrypt(encrypted)
-    print("Decrypted text:", decrypted)
-
-
